@@ -53,3 +53,13 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# MinGW generated files
+*.Debug
+*debug*
+*.debug
+*.Release
+*build-*
+*build*
+*.pro.user
+*.pro.user.*
