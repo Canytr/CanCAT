@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -27,6 +28,7 @@ public:
     QWidget *centralwidget;
     QListView *listView;
     QListView *listView_2;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
@@ -53,6 +55,9 @@ public:
         listView_2 = new QListView(centralwidget);
         listView_2->setObjectName(QString::fromUtf8("listView_2"));
         listView_2->setGeometry(QRect(190, 421, 611, 141));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(200, 10, 80, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -101,6 +106,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File ", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit ", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
